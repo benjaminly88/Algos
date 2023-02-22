@@ -5,7 +5,7 @@ ex: [1,5,4,3,6,2,4,7] should return 4
 */
 
 const duplicateNumber = array => {
-
+    
 };
 
 

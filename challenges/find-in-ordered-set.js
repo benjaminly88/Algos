@@ -10,9 +10,12 @@ findInOrderedSet(nums, 2);  -> false
 */
 
 const findInOrderedSet = (array, target) => {
-  
+  const set = new Set(array);
+  return set.has(target);
 };
 
+const nums = [-3, 0, 8, 13, 37];
+console.log(findInOrderedSet(nums, 0));
 
 /*
 Extension:
@@ -34,7 +37,19 @@ findIn2dMatrix(matrix, 42); -> false
 */
 
 const findIn2dMatrix = (matrix, target) => {
-
+  const newArr = matrix.flat(Infinity);
+  const set = new Set(newArr);
+  // console.log(set);
+  return set.has(target);
 };
+
+const matrix = [
+  [-3, -1, 2, 4, 5],
+  [6, 7, 8, 13, 37],
+  [41, 49, 50, 61, 75],
+];
+
+console.log(findIn2dMatrix(matrix, 13));
+console.log(findIn2dMatrix(matrix, 42));
 
 module.exports = { findInOrderedSet, findIn2dMatrix };
